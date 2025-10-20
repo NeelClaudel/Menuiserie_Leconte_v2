@@ -30,15 +30,15 @@ const Footer = () => {
               >
                 <a href="/" className="relative">
                   <Image
-                    width={110}
-                    height={80}
+                    width={200}
+                    height={160}
                     src="/images/logo/logo-light_ML.svg"
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
-                    width={110}
-                    height={80}
+                    width={200}
+                    height={160}
                     src="/images/logo/logo-dark_ML.svg"
                     alt="Logo"
                     className="hidden dark:block"
@@ -46,7 +46,7 @@ const Footer = () => {
                 </a>
 
                 <p className="mt-5 mb-10">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Votre Artisan Menuisier à Belz - Morbihan (56) 
                 </p>
 
                 <p className="text-sectiontitle mb-1.5 tracking-[5px] uppercase">
@@ -80,7 +80,7 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="text-itemtitle2 mb-9 font-medium text-black dark:text-white">
-                    Quick Links
+                    Liens Rapides
                   </h4>
 
                   <ul>
@@ -89,36 +89,37 @@ const Footer = () => {
                         href="#"
                         className="hover:text-primary mb-3 inline-block"
                       >
-                        Home
+                        Accueil
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="#features"
                         className="hover:text-primary mb-3 inline-block"
                       >
-                        Product
+                        Services
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="#blog"
                         className="hover:text-primary mb-3 inline-block"
                       >
-                        Careers
+                        Réalisations
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="#support"
                         className="hover:text-primary mb-3 inline-block"
                       >
-                        Pricing
+                        Contact
                       </a>
                     </li>
                   </ul>
                 </motion.div>
 
+                
                 <motion.div
                   variants={{
                     hidden: {
@@ -138,44 +139,85 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="text-itemtitle2 mb-9 font-medium text-black dark:text-white">
-                    Support
+                    Nos Produits
                   </h4>
 
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/pages/motorisation"
                         className="hover:text-primary mb-3 inline-block"
                       >
-                        Company
+                        Motorisations Connectées
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/pages/stores_bannes"
                         className="hover:text-primary mb-3 inline-block"
                       >
-                        Press media
+                        Stores Bannes
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/pages/portails"
                         className="hover:text-primary mb-3 inline-block"
                       >
-                        Our Blog
+                        Portails
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/pages/clotures"
                         className="hover:text-primary mb-3 inline-block"
                       >
-                        Contact Us
+                        Clôtures
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/interphonie"
+                        className="hover:text-primary mb-3 inline-block"
+                      >
+                        Interphonie
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/garage"
+                        className="hover:text-primary mb-3 inline-block"
+                      >
+                        Portes De Garage
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/volets"
+                        className="hover:text-primary mb-3 inline-block"
+                      >
+                        Volets Roulants
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/terrasse_pergola"
+                        className="hover:text-primary mb-3 inline-block"
+                      >
+                        Terrasse Et Pergola
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/ouvertures"
+                        className="hover:text-primary mb-3 inline-block"
+                      >
+                        Ouvertures
                       </a>
                     </li>
                   </ul>
                 </motion.div>
+                
 
                 <motion.div
                   variants={{
@@ -195,6 +237,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
+                  {/*
                   <h4 className="text-itemtitle2 mb-9 font-medium text-black dark:text-white">
                     Newsletter
                   </h4>
@@ -236,7 +279,7 @@ const Footer = () => {
                         </svg>
                       </button>
                     </div>
-                  </form>
+                  </form>*/}
                 </motion.div>
               </div>
             </div>
@@ -263,6 +306,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
+              {/** 
               <ul className="flex items-center gap-8">
                 <li>
                   <a href="#" className="hover:text-primary">
@@ -275,11 +319,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <a href="#Support" className="hover:text-primary">
                     Support
                   </a>
                 </li>
-              </ul>
+              </ul>*/}
             </motion.div>
 
             <motion.div
@@ -301,7 +345,7 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} Solid. All rights reserved
+                &copy; {new Date().getFullYear()} Menuiserie Leconte
               </p>
             </motion.div>
 

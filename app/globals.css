@@ -19,7 +19,7 @@
   --color-black: #181c31;
   --color-blackho: #2c3149;
   --color-blacksection: #1c2136;
-  --color-primary: #915d38 /*#006bff*/;
+  --color-primary: #4e8fd3 /*#bba699*/ /*#915d38*/ /*#006bff*/;
   --color-primaryho: #0063ec;
   --color-meta: #20c5a8;
   --color-waterloo: #757693;
@@ -27,6 +27,9 @@
   --color-alabaster: #fbfbfb;
   --color-zumthor: #edf5ff;
   --color-socialicon: #d1d8e0;
+
+  --color-light_bg: #d6f1ff /*#ffffff*/;
+  --color-dark_bg: #002552 /*#ffffff*/;
 
   --text-metatitle: 12px, 20px;
   --text-sectiontitle: 14px, 22px;

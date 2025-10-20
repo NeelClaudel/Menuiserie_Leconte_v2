@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, description } = feature;
+  const { icon, title, path, description } = feature;
 
   return (
     <>
@@ -30,7 +30,9 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
           <Image src={icon} width={36} height={36} alt="title" />
         </div>
         <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+          <a href={path}>
           {title}
+          </a>
         </h3>
         <p>{description}</p>
       </motion.div>

@@ -1,11 +1,11 @@
 import React from "react";
 import SectionHeader from "../Common/SectionHeader";
-import BlogItem from "./BlogItem";
-import BlogData from "./blogData";
+import ProductItem from "./productItem";
+import ProductData from "./productData";
 
-const Blog = async () => {
+const Product = async () => {
   return (
-    <section id="blog" className="py-20 lg:py-25 xl:py-30">
+    <section id="product" className="py-20 lg:py-25 xl:py-30">
       <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
         {/* <!-- Section Title Start --> */}
         <div className="animate_top mx-auto text-center">
@@ -22,8 +22,8 @@ const Blog = async () => {
 
       <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
         <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-          {BlogData.slice(0, 3).map((blog, key) => (
-            <BlogItem blog={blog} key={key} />
+          {ProductData.slice(0, 3).map((product, key) => (
+            <ProductItem product={product} key={key} />
           ))}
         </div>
       </div>
@@ -31,4 +31,4 @@ const Blog = async () => {
   );
 };
 
-export default Blog;
+export default Product;

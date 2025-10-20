@@ -28,14 +28,15 @@ const Header = () => {
   });
 
   return (
-    <header
-      className={`fixed top-0 left-0 z-99999 w-full py-7 ${
-        stickyMenu
-          ? "bg-white py-4! shadow-sm transition duration-100 dark:bg-black"
-          : ""
-      }`}
-    >
+<header
+  className={`fixed top-0 left-0 z-99999 w-full py-4 bg-[#e5e0d5]/70 dark:bg-[#4e8fd3]/70 backdrop-blur-sm transition duration-100 ${
+    stickyMenu
+      ? "shadow-sm"
+      : ""
+  }`}
+>
       <div className="max-w-c-1390 relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+        {/* <!-- Logo Area --> */}
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
             <Image
@@ -103,14 +104,14 @@ const Header = () => {
           }`}
         >
           <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+            <ul className="dark:text-white flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="hover:text-primary flex cursor-pointer items-center justify-between gap-3"
+                        className="dark:text-white hover:text-primary flex cursor-pointer items-center justify-between gap-3"
                       >
                         {menuItem.title}
                         <span>
@@ -128,7 +129,7 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary">
+                          <li key={key} className="dark:text-white hover:text-primary">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -152,9 +153,9 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <ThemeToggler />
+            {/*<ThemeToggler />
 
-            {/*<Link
+            <Link
               href="https://github.com/NextJSTemplates/solid-nextjs"
               className="text-regular text-waterloo hover:text-primary font-medium"
             >

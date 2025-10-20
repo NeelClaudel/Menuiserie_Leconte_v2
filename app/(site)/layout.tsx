@@ -18,11 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`dark:bg-[#1a3b45] ${inter.className}`}>
+      <body className={`dark:bg-dark_bg ${inter.className}`}>
         <ThemeProvider
           enableSystem={false}
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
         >
           <Lines />
           <Header />
