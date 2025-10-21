@@ -14,10 +14,8 @@ const Feature = () => {
           <SectionHeader
             headerInfo={{
               title: "NOS SERVICES",
-              subtitle: "Services Proposées",
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.`,
+              subtitle: "Votre Artisan Menuisier Pour Tous Vos Aménagements",
+              description: `De la simple pose à la création complète sur mesure, Menuiserie Leconte vous accompagne dans tous vos projets de menuiserie extérieure à Belz et dans le Morbihan. Portails, clôtures, volets, terrasses, pergolas : nous adaptons chaque réalisation à vos besoins spécifiques. Un interlocuteur unique de la conception à l'installation pour des projets qui vous ressemblent.`,
             }}
           />
           {/* <!-- Section Title End --> */}
