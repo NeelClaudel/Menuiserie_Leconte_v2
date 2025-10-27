@@ -204,6 +204,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <br />
       {/* <!-- ===== Contact End ===== --> */}
     </>
   );
