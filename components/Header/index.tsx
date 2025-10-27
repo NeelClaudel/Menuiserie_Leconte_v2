@@ -11,8 +11,71 @@ const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   const pathUrl = usePathname();
+
+  // Détection de la section active par scroll
+  useEffect(() => {
+    if (pathUrl !== "/") return; // Ne fonctionne que sur la page d'accueil
+
+    const handleScroll = () => {
+      const sections = ["features", "blog", "support"];
+      const scrollPosition = window.scrollY + 200; // Offset pour la détection
+
+      // Si on est tout en haut, activer "Accueil"
+      if (window.scrollY < 100) {
+        setActiveSection("/");
+        return;
+      }
+
+      // Vérifier chaque section
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(`#${sectionId}`);
+            return;
+          }
+        }
+      }
+    };
+
+    handleScroll(); // Appel initial
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathUrl]);
+
+  // Helper function to check if a menu item is active
+  const isActiveLink = (menuPath: string | undefined) => {
+    if (!menuPath) return false;
+
+    // Pour les pages normales (pas la page d'accueil)
+    if (pathUrl !== "/") {
+      return pathUrl === menuPath;
+    }
+
+    // Pour la page d'accueil
+    if (menuPath === "/") {
+      return activeSection === "/" || activeSection === "";
+    }
+
+    // Pour les ancres /#features, /#blog
+    if (menuPath.startsWith("/#")) {
+      const sectionId = menuPath.substring(2); // Enlève "/#"
+      return activeSection === `#${sectionId}`;
+    }
+
+    // Pour les ancres #support
+    if (menuPath.startsWith("#")) {
+      return activeSection === menuPath;
+    }
+
+    return false;
+  };
 
   // Sticky menu
   const handleStickyMenu = () => {
@@ -25,7 +88,8 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
-  });
+    return () => window.removeEventListener("scroll", handleStickyMenu);
+  }, []);
 
   return (
 <header
@@ -104,14 +168,14 @@ const Header = () => {
           }`}
         >
           <nav>
-            <ul className="dark:text-white flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="dark:text-white hover:text-primary flex cursor-pointer items-center justify-between gap-3"
+                        className="text-black dark:text-white hover:text-primary flex cursor-pointer items-center justify-between gap-3"
                       >
                         {menuItem.title}
                         <span>
@@ -129,7 +193,7 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="dark:text-white hover:text-primary">
+                          <li key={key} className="text-black dark:text-white hover:text-primary">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -139,9 +203,9 @@ const Header = () => {
                     <Link
                       href={`${menuItem.path}`}
                       className={
-                        pathUrl === menuItem.path
-                          ? "text-primary hover:text-primary"
-                          : "hover:text-primary"
+                        isActiveLink(menuItem.path)
+                          ? "text-primary hover:text-primary font-medium"
+                          : "text-black dark:text-white hover:text-primary"
                       }
                     >
                       {menuItem.title}
