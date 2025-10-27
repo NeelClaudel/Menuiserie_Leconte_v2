@@ -8,12 +8,14 @@ interface ImageCarouselProps {
   images: string[];
   autoPlayInterval?: number; // en millisecondes
   aspectRatio?: string; // ex: "aspect-[97/60]"
+  enableHoverZoom?: boolean; // Activer l'effet de zoom au survol
 }
 
 const ImageCarousel = ({ 
   images, 
   autoPlayInterval = 5000,
-  aspectRatio = "aspect-[97/60]"
+  aspectRatio = "aspect-[97/60]",
+  enableHoverZoom = false
 }: ImageCarouselProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -55,7 +57,9 @@ const ImageCarousel = ({
           src={images[0]}
           alt="Image"
           fill
-          className="object-cover object-center"
+          className={`object-cover object-center ${
+            enableHoverZoom ? "transition-transform duration-500 hover:scale-105" : ""
+          }`}
         />
       </div>
     );
@@ -85,7 +89,9 @@ const ImageCarousel = ({
           src={images[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
           fill
-          className="object-cover object-center"
+          className={`object-cover object-center ${
+            enableHoverZoom ? "transition-transform duration-500 hover:scale-105" : ""
+          }`}
         />
       </motion.div>
 
