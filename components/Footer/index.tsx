@@ -32,14 +32,14 @@ const Footer = () => {
                   <Image
                     width={200}
                     height={160}
-                    src="/images/logo/logo-light_ML.svg"
+                    src="/images/logo/LECONTE_200x43.svg"
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
                     width={200}
                     height={160}
-                    src="/images/logo/logo-dark_ML.svg"
+                    src="/images/logo/LECONTE_200x43.svg"
                     alt="Logo"
                     className="hidden dark:block"
                   />
