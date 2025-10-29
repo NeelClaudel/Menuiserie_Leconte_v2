@@ -57,7 +57,7 @@ const CTA = () => {
                 <Image
                   width={299}
                   height={299}
-                  src="/images/shape/shape-06.png"
+                  src="/images/img_custom/leconte_shape_01.svg"
                   alt="Saly"
                   className="hidden xl:block"
                 />
