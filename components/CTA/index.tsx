@@ -29,7 +29,7 @@ const CTA = () => {
               className="animate_left md:w-[70%] lg:w-1/2"
             >
               <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Choisissez La Menuiserie Leconte Pour Votre Projet 
+                Choisissez Menuiserie Leconte Pour Votre Projet 
               </h2>
               <p>
                 Savoir-faire artisanal, matériaux de qualité et suivi personnalisé. Nous prenons en charge votre projet de A à Z pour un résultat durable qui valorise votre habitat.
