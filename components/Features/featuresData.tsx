@@ -73,6 +73,14 @@ const featuresData: Feature[] = [
     description:
       "Agrandissez vos espaces et gagnez en luminosité. Création d'ouvertures sur mesure avec étude structurelle et finitions soignées conformes aux normes.",
   },
+      {
+    id: 10,
+    icon: "/images/icon/icon-06.svg",
+    title: "Carport",
+    path: "/pages/carport",
+    description:
+      "Protégez vos véhicules avec élégance. Carports sur mesure en bois ou aluminium, structures robustes adaptées au climat côtier du Morbihan.",
+  },
 ];
 
 export default featuresData;

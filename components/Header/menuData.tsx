@@ -85,6 +85,12 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/pages/ouvertures",
       },
+            {
+        id: 3.10,
+        title: "Carports",
+        newTab: false,
+        path: "/pages/carport",
+      },
     ],
   },
 
