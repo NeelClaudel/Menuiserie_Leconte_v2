@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  
+  <!-- Motorisation Connectée -->
+  <symbol id="icon-motorisation" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 7v2M12 15v2M17 12h-2M9 12H7" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15.5 8.5l-1.4 1.4M9.9 14.1l-1.4 1.4M15.5 15.5l-1.4-1.4M9.9 9.9L8.5 8.5" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Store Banne -->
+  <symbol id="icon-store-banne" viewBox="0 0 24 24">
+    <path d="M3 8h18v2c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V8z" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 11v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-8" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 8V6c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v2" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 11v9M11 11v9M15 11v9M19 11v9" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Portail -->
+  <symbol id="icon-portail" viewBox="0 0 24 24">
+    <rect x="3" y="5" width="8" height="14" rx="1" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="13" y="5" width="8" height="14" rx="1" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 19h18M9 12h2" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="9" cy="12" r="0.5" fill="currentColor"/>
+    <circle cx="15" cy="12" r="0.5" fill="currentColor"/>
+    <path d="M7 8v8M17 8v8" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Clôture -->
+  <symbol id="icon-cloture" viewBox="0 0 24 24">
+    <path d="M4 19V8M8 19V8M12 19V8M16 19V8M20 19V8" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 8h18M3 12h18M3 16h18" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4 5l2 3M8 5l2 3M12 5l2 3M16 5l2 3" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Interphonie -->
+  <symbol id="icon-interphonie" viewBox="0 0 24 24">
+    <rect x="6" y="4" width="12" height="16" rx="2" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="10" r="2" 
+          fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <rect x="9" y="14" width="6" height="3" rx="0.5" 
+          fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M10 7h4M10 18.5h4" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Porte de Garage -->
+  <symbol id="icon-garage" viewBox="0 0 24 24">
+    <path d="M4 21V9c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v12" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2 21h20M6 11h12M6 14h12M6 17h12" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 3l8 5H4l8-5z" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="17" r="0.5" fill="currentColor"/>
+  </symbol>
+
+  <!-- Volet Roulant -->
+  <symbol id="icon-volet" viewBox="0 0 24 24">
+    <rect x="6" y="7" width="12" height="13" rx="1" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 4h12v3H6z" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 10h12M6 13h12M6 16h12" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="9" cy="5.5" r="0.5" fill="currentColor"/>
+    <path d="M10 5.5h5" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Terrasse -->
+  <symbol id="icon-terrasse" viewBox="0 0 24 24">
+    <path d="M3 20h18" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 20V10c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 12h10M7 15h10M7 18h10" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M12 4v4" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="12" cy="4" r="1" fill="currentColor"/>
+  </symbol>
+
+  <!-- Pergola -->
+  <symbol id="icon-pergola" viewBox="0 0 24 24">
+    <path d="M4 8h16M4 8V6M20 8V6" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 8v12M10 8v12M14 8v12M18 8v12" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4 6h16v2H4z" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2 20h20" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M7 4l5 2M13 6l4-2" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Ouverture (Baie vitrée) -->
+  <symbol id="icon-ouverture" viewBox="0 0 24 24">
+    <rect x="4" y="4" width="16" height="16" rx="1" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 4v16" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="6" y="6" width="4" height="12" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="14" y="6" width="4" height="12" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10.5" cy="12" r="0.5" fill="currentColor"/>
+    <path d="M7 9h2M7 12h2M7 15h2M15 9h2M15 12h2M15 15h2" 
+          stroke="currentColor" stroke-width="0.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Carport -->
+  <symbol id="icon-carport" viewBox="0 0 24 24">
+    <path d="M2 20h20" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4 20V8M20 20V8" 
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 8h18l-2-4H5L3 8z" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="12" cy="15" rx="5" ry="3" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 15v-2c0-.55.45-1 1-1h6c.55 0 1 .45 1 1v2" 
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+</svg>

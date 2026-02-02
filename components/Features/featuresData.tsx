@@ -3,7 +3,7 @@ import { Feature } from "@/types/feature";
 const featuresData: Feature[] = [
   {
     id: 1,
-    icon: "/images/icon/icon-01.svg",
+    icon: "motorisation" as const,
     title: "Motorisations Connectées",
     path: "/pages/motorisation",
     description:
@@ -11,7 +11,7 @@ const featuresData: Feature[] = [
   },
   {
     id: 2,
-    icon: "/images/icon/icon-02.svg",
+    icon: "store-banne" as const,
     title: "Stores Bannes",
     path: "/pages/stores_bannes",
     description:
@@ -19,7 +19,7 @@ const featuresData: Feature[] = [
   },
   {
     id: 3,
-    icon: "/images/icon/icon-03.svg",
+    icon: "portail" as const,
     title: "Portails",
     path: "/pages/portails",
     description:
@@ -27,7 +27,7 @@ const featuresData: Feature[] = [
   },
   {
     id: 4,
-    icon: "/images/icon/icon-04.svg",
+    icon: "cloture" as const,
     title: "Clôtures",
     path: "/pages/clotures",
     description:
@@ -35,7 +35,7 @@ const featuresData: Feature[] = [
   },
   {
     id: 5,
-    icon: "/images/icon/icon-05.svg",
+    icon: "interphonie" as const,
     title: "Interphonie",
     path: "/pages/interphonie",
     description:
@@ -43,39 +43,39 @@ const featuresData: Feature[] = [
   },
   {
     id: 6,
-    icon: "/images/icon/icon-06.svg",
+    icon: "garage" as const,
     title: "Portes De Garage",
     path: "/pages/garage",
     description:
       "Portes sectionnelles, basculantes ou enroulables avec motorisation. Isolation thermique optimale et commande à distance pour un usage quotidien simplifié.",
   },
-    {
+  {
     id: 7,
-    icon: "/images/icon/icon-06.svg",
+    icon: "volet" as const,
     title: "Volets Roulants",
     path: "/pages/volets",
     description:
       "Protection, isolation et confort thermique garantis. Pose et dépannage de volets roulants manuels ou motorisés adaptés à vos ouvertures.",
   },
-    {
+  {
     id: 8,
-    icon: "/images/icon/icon-06.svg",
+    icon: "terrasse" as const,
     title: "Terrasse et Pergola de jardin",
     path: "/pages/terrasse_pergola",
     description:
       "Créez votre espace de vie extérieur idéal. Terrasses en bois noble et pergolas sur mesure pour profiter pleinement de votre jardin.",
   },
-    {
+  {
     id: 9,
-    icon: "/images/icon/icon-06.svg",
+    icon: "ouverture" as const,
     title: "Création d'Ouvertures",
     path: "/pages/ouvertures",
     description:
       "Agrandissez vos espaces et gagnez en luminosité. Création d'ouvertures sur mesure avec étude structurelle et finitions soignées conformes aux normes.",
   },
-      {
+  {
     id: 10,
-    icon: "/images/icon/icon-06.svg",
+    icon: "carport" as const,
     title: "Carport",
     path: "/pages/carport",
     description:
