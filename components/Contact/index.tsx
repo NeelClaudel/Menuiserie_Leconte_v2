@@ -182,7 +182,7 @@ const Contact = () => {
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Nous Intervenons : 
                 </h3>
-                <p>Dans Le Morbihan (56), Belz, Etel, Carnac, Quiberon, Plouhinec, Kervigniac, Auray </p>
+                <p>Dans Le Morbihan (56) </p>
               </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">

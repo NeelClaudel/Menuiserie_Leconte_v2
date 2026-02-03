@@ -35,7 +35,7 @@ export default function Home() {
       {/*<FunFact />*/}
       
       <CTA />
-      <Blog />
+      {/*<Blog />*/}
       <FAQ />
       <Testimonial />
       {/*<Pricing />*/}
