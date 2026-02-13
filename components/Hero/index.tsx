@@ -7,9 +7,9 @@ const Hero = () => {
   const [email, setEmail] = useState("");
 
   const heroImages = [
-    "/images/photodavy/20251021_184233.jpg",
-    "/images/photodavy/20251021_184233.jpg",
-    "/images/photodavy/20251021_184233.jpg",
+    "/images/photodavy/fenetres_01.jpg",
+    "/images/photodavy/fenetres_04.jpg",
+    "/images/photodavy/fenetres_03.jpg",
   ];
 
   const handleSubmit = (e) => {

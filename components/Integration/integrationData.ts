@@ -32,7 +32,10 @@ export const integrationItems: IntegrationItem[] = [
   { type: "dot", size: 15, color: "#62E888" },
   { type: "brand", src: "./images/brand/gypass-logo.svg", alt: "Gypass" },
   { type: "dot", size: 23, color: "#EF5C00" },
-  { type: "brand", src: "./images/brand/Somfy-logo.svg", alt: "Somfy" },
+  { type: "brand", src: "./images/brand/logo-aiphone_02.svg", alt: "Aiphone" },
   { type: "dot", size: 15, color: "#016BFF" },
-  { type: "brand", src: "./images/brand/jeanneau-logo.svg", alt: "Jeanneau" },
+  { type: "brand", src: "/images/brand/Logo-ICP-vecto-1-1.webp", alt: "ICP" },
+  { type: "brand", src: "/images/brand/LOGO-SDA-BLANC.webp", alt: "SDA" },
+    { type: "dot", size: 15, color: "#016BFF" },
+  { type: "brand", src: "/images/brand/png_GYT_logo.png", alt: "SDA" },
 ];

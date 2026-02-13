@@ -15,14 +15,21 @@ const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
           <p className="mb-5">{desc1}</p>
           <p className="w-11/12">{desc2}</p>
         </div>
-        <div className="relative mx-auto hidden aspect-562/366 max-w-[550px] md:block md:w-1/2">
-          <Image src={image} alt={title} fill className="dark:hidden" />
-          <Image
-            src={imageDark}
-            alt={title}
-            fill
-            className="hidden dark:block"
-          />
+        <div className="relative mx-auto hidden max-w-[550px] md:block md:w-1/2">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-solid-7">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover dark:hidden"
+            />
+            <Image
+              src={imageDark}
+              alt={title}
+              fill
+              className="hidden object-cover dark:block"
+            />
+          </div>
         </div>
       </div>
     </>
