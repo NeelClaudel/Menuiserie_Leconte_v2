@@ -4,7 +4,7 @@ export const terrassePergolaData: ServicePageData = {
   slug: "terrasse_pergola",
   title: "Terrasses en bois et pergolas sur mesure",
   subtitle: "Creez votre espace de vie exterieur ideal",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/image_fournisseur/terrasse_01.jpg",
   mainImageAlt: "Terrasse bois et pergola",
   metadata: {
     title: "Terrasse et Pergola - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const terrassePergolaData: ServicePageData = {
         "Notre expertise couvre tout le Morbihan de Belz a Vannes pour creer des espaces exterieurs durables et esthetiques. Nous gerons l'integralite du projet : etude de faisabilite, preparation du terrain, creation des fondations, pose de la structure et finitions soignees. Terrasses de plain-pied, surelevees avec garde-corps, contournant une piscine ou en remplacement d'une ancienne dalle beton : chaque realisation est unique et parfaitement dimensionnee.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Terrasse bois" },
-        { src: "/images/blog/blog-02.png", alt: "Pergola bioclimatique" },
+        { src: "/images/image_fournisseur/pergola_01.jpg", alt: "Terrasse bois" },
+        { src: "/images/image_fournisseur/pergola_02.jpg", alt: "Pergola bioclimatique" },
       ],
       title: "Pergolas bioclimatiques et espaces ombrages",
     },

@@ -4,7 +4,7 @@ export const voletsData: ServicePageData = {
   slug: "volets",
   title: "Volets roulants manuels et motorisés",
   subtitle: "Protection et isolation thermique optimales",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/image_fournisseur/SOMFY_volet_roulant_01.jpg",
   mainImageAlt: "Volets roulants",
   metadata: {
     title: "Volets Roulants - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const voletsData: ServicePageData = {
         "Nous équipons les habitations de Belz, Erdeven, Auray, Carnac et toute la région avec des volets de qualité professionnelle résistant au vent, à la pluie et aux tentatives d'effraction. Manoeuvre manuelle par sangle pour les petites fenêtres, ou motorisation radio pour un confort maximal sur les grandes baies. Les coloris s'harmonisent avec vos menuiseries existantes grâce à une large palette RAL disponible.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Volets roulants" },
-        { src: "/images/blog/blog-02.png", alt: "Installation volets" },
+        { src: "/images/image_fournisseur/SOMFY_volet_roulant_01.jpg", alt: "Volets roulants" },
+        { src: "/images/image_fournisseur/SOMFY_volet_roulant_02.jpg", alt: "Installation volets" },
       ],
       title: "Dépannage rapide et maintenance préventive",
     },

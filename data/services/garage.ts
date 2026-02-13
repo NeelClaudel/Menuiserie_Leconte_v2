@@ -4,7 +4,7 @@ export const garageData: ServicePageData = {
   slug: "garage",
   title: "Portes de garage sectionnelles et motorisées",
   subtitle: "Praticité et isolation pour votre garage",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/photodavy/garage_01.jpg",
   mainImageAlt: "Porte de garage sectionnelle",
   metadata: {
     title: "Portes de Garage - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const garageData: ServicePageData = {
         "Notre zone d'intervention couvre Belz, Ria d'Etel, Plouhinec, Auray, Carnac jusqu'à Lorient et Vannes. Nous prenons les mesures précises de votre ouverture, vous conseillons sur le modèle le plus adapté, et réalisons la pose complète avec motorisation intégrée. Panneaux double paroi isolants, joints périmétriques étanches, et serrure multipoints : votre garage reste protégé des intrusions et des déperditions thermiques.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Porte de garage" },
-        { src: "/images/blog/blog-02.png", alt: "Installation garage" },
+        { src: "/images/image_fournisseur/SDA_porte_garage_01.webp", alt: "Porte de garage" },
+        { src: "/images/image_fournisseur/SDA_porte_garage_02.webp", alt: "Installation garage" },
       ],
       title: "Motorisations silencieuses et sécurisées",
     },

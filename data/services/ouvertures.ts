@@ -4,7 +4,7 @@ export const ouverturesData: ServicePageData = {
   slug: "ouvertures",
   title: "Création d'ouvertures sur mesure",
   subtitle: "Lumière et espace pour transformer votre intérieur",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/photodavy/fenetres_01.jpg",
   mainImageAlt: "Création d'ouverture",
   metadata: {
     title: "Ouvertures - Menuiserie Leconte",
@@ -17,10 +17,10 @@ export const ouverturesData: ServicePageData = {
         "Nous intervenons sur Belz, Auray, Carnac, Lorient et Vannes pour transformer votre habitat en respectant le cachet architectural existant. Pierre, parpaing, brique ou bois : notre savoir-faire s'adapte à tous les types de construction, qu'il s'agisse d'une maison récente ou d'un bâtiment ancien. Les menuiseries installées sont de haute qualité : PVC, aluminium ou bois avec double ou triple vitrage, rupture de pont thermique, et finitions intérieures/extérieures coordonnées.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Création ouverture" },
-        { src: "/images/blog/blog-02.png", alt: "Baie vitrée" },
+        { src: "/images/photodavy/fenetres_03.jpg", alt: "Création ouverture" },
+        { src: "/images/photodavy/fenetres_02.jpg", alt: "Baie vitrée" },
       ],
-      title: "Conformité et finitions impeccables",
+      title: "Conformité et finitions",
     },
     {
       paragraphs: [

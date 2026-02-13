@@ -59,7 +59,7 @@ const IntegrationItemRenderer = ({ item }: { item: IntegrationItem }) => {
       whileInView="visible"
       transition={{ duration: 1, delay: 0.1 }}
       viewport={{ once: true }}
-      className="animate_top w-1/6"
+      className="animate_top w-1/3 md:w-1/4 xl:w-1/6"
     >
       {item.type === "brand" && (
         <div className="shadow-solid-7 inline-block rounded-[10px] bg-[#4e8fd3] p-4.5">

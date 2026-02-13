@@ -4,7 +4,7 @@ export const motorisationData: ServicePageData = {
   slug: "motorisation",
   title: "Motorisations Connectées",
   subtitle: "Confort et sécurité au bout des doigts",
-  mainImage: "/images/img_custom/terrasse_01.jpg",
+  mainImage: "/images/photodavy/portail_01.jpg",
   mainImageAlt: "Motorisation connectée",
   metadata: {
     title: "Motorisations Connectées - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const motorisationData: ServicePageData = {
         "Nos motorisations connectées s'adaptent à vos équipements existants ou neufs dans tout le Morbihan : Belz, Auray, Carnac, Lorient et Vannes. Nous travaillons avec des marques reconnues pour leur fiabilité et leur compatibilité avec les standards domotiques actuels. L'installation inclut le paramétrage complet du système, la connexion à votre réseau Wi-Fi, et une formation personnalisée pour maîtriser toutes les fonctionnalités.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Motorisation connectée" },
-        { src: "/images/blog/blog-02.png", alt: "Application domotique" },
+        { src: "/images/image_fournisseur/motorisation_connectee_01.jpg", alt: "Motorisation connectée" },
+        { src: "/images/image_fournisseur/motorisation_connectee_01.jpg", alt: "Application domotique" },
       ],
       title: "Technologies avancées et économies d'énergie",
     },

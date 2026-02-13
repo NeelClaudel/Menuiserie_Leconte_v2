@@ -35,7 +35,8 @@ export const integrationItems: IntegrationItem[] = [
   { type: "brand", src: "./images/brand/logo-aiphone_02.svg", alt: "Aiphone" },
   { type: "dot", size: 15, color: "#016BFF" },
   { type: "brand", src: "/images/brand/Logo-ICP-vecto-1-1.webp", alt: "ICP" },
+  { type: "empty" },
   { type: "brand", src: "/images/brand/LOGO-SDA-BLANC.webp", alt: "SDA" },
-    { type: "dot", size: 15, color: "#016BFF" },
+  { type: "dot", size: 15, color: "#016BFF" },
   { type: "brand", src: "/images/brand/png_GYT_logo.png", alt: "SDA" },
 ];

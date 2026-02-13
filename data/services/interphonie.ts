@@ -4,7 +4,7 @@ export const interphonieData: ServicePageData = {
   slug: "interphonie",
   title: "Systèmes d'interphonie vidéo et audio",
   subtitle: "Contrôlez vos accès en toute sécurité",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/image_fournisseur/interphone_01.png",
   mainImageAlt: "Interphone vidéo",
   metadata: {
     title: "Interphonie - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const interphonieData: ServicePageData = {
         "Nous équipons maisons individuelles et copropriétés sur Belz, Auray, Carnac et environs avec des solutions adaptées à chaque configuration. Interphone filaire pour les installations neuves, ou système sans fil pour la rénovation sans travaux importants. Les modèles connectés se pilotent depuis votre smartphone : recevez une notification à chaque sonnerie, parlez à vos visiteurs et déclenchez l'ouverture du portail où que vous soyez dans le monde.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Interphone vidéo" },
-        { src: "/images/blog/blog-02.png", alt: "Platine de rue" },
+        { src: "/images/image_fournisseur/interphone_01.png", alt: "Interphone vidéo" },
+        { src: "/images/image_fournisseur/interphone_03.jpg", alt: "Platine de rue" },
       ],
       title: "Installation intégrée et fonctionnalités avancées",
     },

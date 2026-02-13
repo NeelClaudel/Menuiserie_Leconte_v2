@@ -4,7 +4,7 @@ export const cloturesData: ServicePageData = {
   slug: "clotures",
   title: "Clôtures en bois ou aluminium",
   subtitle: "Élégance et durabilité pour votre extérieur",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/photodavy/cloture_01.jpg",
   mainImageAlt: "Clôture sur mesure",
   metadata: {
     title: "Clôtures - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const cloturesData: ServicePageData = {
         "Nous intervenons sur tout le secteur de Belz, Ria d'Etel, Auray et Carnac pour créer des clôtures qui allient sécurité et esthétique. Chaque projet fait l'objet d'une étude personnalisée prenant en compte la configuration de votre terrain, le style de votre habitation et vos contraintes techniques. Nos matériaux sont sélectionnés pour leur qualité et leur longévité : bois traité autoclave classe 4, aluminium thermolaqué résistant à la corrosion, et quincaillerie inoxydable pour un résultat durable.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Clôture bois" },
-        { src: "/images/blog/blog-02.png", alt: "Clôture aluminium" },
+        { src: "/images/photodavy/cloture_02.jpg", alt: "Clôture bois" },
+        { src: "/images/photodavy/cloture_03.jpg", alt: "Clôture aluminium" },
       ],
       title: "Installation professionnelle et finitions soignées",
     },

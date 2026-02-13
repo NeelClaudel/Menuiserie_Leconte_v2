@@ -4,7 +4,7 @@ export const portailsData: ServicePageData = {
   slug: "portails",
   title: "Portails",
   subtitle: "Portails battants et coulissants sur mesure",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/photodavy/portail_01.jpg",
   mainImageAlt: "Portail sur mesure",
   metadata: {
     title: "Portails - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const portailsData: ServicePageData = {
         "Notre expertise couvre tout le Morbihan de Belz a Vannes : etude de terrain, choix des materiaux, motorisation integree et installation complete. Nous proposons une large gamme de designs : contemporain avec lames horizontales, classique avec traverse centrale, ajoure pour la luminosite, ou plein pour l'intimite totale. Chaque portail est fabrique selon vos dimensions exactes avec des finitions de qualite professionnelle.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Portail aluminium" },
-        { src: "/images/blog/blog-02.png", alt: "Portail coulissant" },
+        { src: "/images/photodavy/portail_01.jpg", alt: "Portail aluminium" },
+        { src: "/images/photodavy/portail_01.jpg", alt: "Portail coulissant" },
       ],
       title: "Motorisation fiable et securite optimale",
     },

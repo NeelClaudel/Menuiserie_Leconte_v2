@@ -4,7 +4,7 @@ export const storesBannesData: ServicePageData = {
   slug: "stores_bannes",
   title: "Stores Bannes",
   subtitle: "Protection solaire et confort exterieur",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/image_fournisseur/store_banne_01.webp",
   mainImageAlt: "Store banne",
   metadata: {
     title: "Stores Bannes - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const storesBannesData: ServicePageData = {
         "Nous intervenons sur Belz, Erdeven, Plouhinec et toute la region d'Auray pour installer vos stores bannes avec motorisation integree. Commande murale, telecommande radio ou integration a votre systeme domotique : vous choisissez le niveau d'automatisation souhaite. Nos stores sont equipes de capteurs vent et soleil pour une gestion automatique et une protection optimale de la toile lors de rafales.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Store banne" },
-        { src: "/images/blog/blog-02.png", alt: "Store motorise" },
+        { src: "/images/image_fournisseur/store_banne_03.webp", alt: "Store banne" },
+        { src: "/images/image_fournisseur/store_banne_02.jpg", alt: "Store motorise" },
       ],
       title: "Durabilite et resistance aux intemperies",
     },
