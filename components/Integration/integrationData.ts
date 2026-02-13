@@ -18,8 +18,8 @@ export type IntegrationItem = BrandItem | DotItem | EmptyItem;
 
 export const headerData = {
   title: "NOS MARQUES PARTENAIRES",
-  subtitle: "Nous Selectionnons Nos Fournisseurs Avec Soin",
-  description: "Pour Garantir La Meilleur Qualite Et Longevite A Nos Clients.",
+  subtitle: "Nous sélectionnons nos fournisseurs avec soin",
+  description: "Pour garantir la meilleure qualite et longevité à nos clients.",
 };
 
 export const integrationItems: IntegrationItem[] = [
