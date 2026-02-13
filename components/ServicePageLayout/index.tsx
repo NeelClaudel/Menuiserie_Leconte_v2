@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { ServicePageData } from "@/types/servicePage";
 import ContactButton from "@/components/ContactButton";
 
@@ -32,25 +34,36 @@ const ServicePageLayout = ({ data }: Props) => {
   );
 };
 
-const Sidebar = () => (
-  <div className="md:w-1/2 lg:w-[32%]">
-    <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
-      <h4 className="mb-7.5 text-2xl font-semibold text-black dark:text-white">
-        Nos Produits
-      </h4>
-      <ul>
-        {productLinks.map((link) => (
-          <li
-            key={link.href}
-            className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary"
-          >
-            <a href={link.href}>{link.label}</a>
-          </li>
-        ))}
-      </ul>
+const Sidebar = () => {
+  const pathname = usePathname();
+
+  return (
+    <div className="md:w-1/2 lg:w-[32%]">
+      <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
+        <h4 className="mb-7.5 text-2xl font-semibold text-black dark:text-white">
+          Nos Produits
+        </h4>
+        <ul>
+          {productLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <li
+                key={link.href}
+                className={`mb-3 transition-all duration-300 last:mb-0 ${
+                  isActive
+                    ? "font-semibold text-primary"
+                    : "hover:text-primary"
+                }`}
+              >
+                <a href={link.href}>{link.label}</a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const MainContent = ({ data }: Props) => (
   <div className="lg:w-2/3">
