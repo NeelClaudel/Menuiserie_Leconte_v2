@@ -3,10 +3,10 @@ import { ServicePageData } from "@/types/servicePage";
 import ContactButton from "@/components/ContactButton";
 
 const productLinks = [
-  { href: "/pages/motorisation", label: "Motorisations Connectées" },
+  { href: "/pages/motorisation", label: "Motorisations Connectees" },
   { href: "/pages/stores_bannes", label: "Stores Bannes" },
   { href: "/pages/portails", label: "Portails" },
-  { href: "/pages/clotures", label: "Clôtures" },
+  { href: "/pages/clotures", label: "Clotures" },
   { href: "/pages/interphonie", label: "Interphonie" },
   { href: "/pages/garage", label: "Portes De Garage" },
   { href: "/pages/volets", label: "Volets Roulants" },
@@ -59,13 +59,13 @@ const MainContent = ({ data }: Props) => (
         {data.title}
       </h1>
 
-      <div className="mb-10 w-full overflow-hidden">
-        <div className="relative aspect-97/60 w-full sm:aspect-97/44">
+      <div className="mb-10 w-full overflow-hidden rounded-lg">
+        <div className="relative aspect-[16/9] w-full">
           <Image
             src={data.mainImage}
             alt={data.mainImageAlt}
             fill
-            className="rounded-md object-cover object-center"
+            className="rounded-lg object-cover object-center"
           />
         </div>
       </div>
@@ -81,15 +81,19 @@ const MainContent = ({ data }: Props) => (
               <p key={pIdx}>{p}</p>
             ))}
             {section.images && (
-              <div className="flex flex-wrap gap-5">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 {section.images.map((img, imgIdx) => (
-                  <Image
+                  <div
                     key={imgIdx}
-                    src={img.src}
-                    width={350}
-                    height={200}
-                    alt={img.alt}
-                  />
+                    className="relative aspect-[16/10] w-full overflow-hidden rounded-lg"
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 ))}
               </div>
             )}

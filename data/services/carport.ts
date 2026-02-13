@@ -4,7 +4,7 @@ export const carportData: ServicePageData = {
   slug: "carport",
   title: "Carports en bois et aluminium",
   subtitle: "Protegez vos vehicules avec elegance",
-  mainImage: "/images/blog/blog-01.png",
+  mainImage: "/images/photodavy/carport_01.jpg",
   mainImageAlt: "Carport sur mesure",
   metadata: {
     title: "Carports - Menuiserie Leconte",
@@ -17,8 +17,8 @@ export const carportData: ServicePageData = {
         "Nous intervenons sur Belz, Auray, Carnac, Lorient et Vannes pour creer des carports fonctionnels et esthetiques. Simple, double ou triple, adosse a votre habitation ou autoportant dans votre jardin : chaque configuration est etudiee selon l'espace disponible et vos besoins de stationnement. Toiture plate, monopente ou double pente, avec couverture en polycarbonate, tuiles, bac acier ou vegetalisee selon le style recherche.",
       ],
       images: [
-        { src: "/images/blog/blog-01.png", alt: "Carport bois" },
-        { src: "/images/blog/blog-02.png", alt: "Carport aluminium" },
+        { src: "/images/photodavy/carport_01.jpg", alt: "Carport bois" },
+        { src: "/images/photodavy/carport_01.jpg", alt: "Carport aluminium" },
       ],
       title: "Robustesse et conformite aux normes",
     },
