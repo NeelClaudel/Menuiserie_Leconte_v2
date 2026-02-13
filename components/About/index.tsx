@@ -26,7 +26,7 @@ const About = () => {
           className="absolute inset-0 z-0 -top-[15%] h-[115%]"
         >
           <Image
-            src="/images/photodavy/20251021_184233.jpg"
+            src="/images/photodavy/fenetres_01.jpg"
             alt="Background"
             fill
             className="object-cover"
