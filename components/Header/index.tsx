@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import ThemeToggler from "./ThemeToggler";
@@ -14,22 +14,20 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState<string>("");
 
   const pathUrl = usePathname();
+  const router = useRouter();
 
-  // Détection de la section active par scroll
   useEffect(() => {
-    if (pathUrl !== "/") return; // Ne fonctionne que sur la page d'accueil
+    if (pathUrl !== "/") return;
 
     const handleScroll = () => {
       const sections = ["features", "blog", "support"];
-      const scrollPosition = window.scrollY + 200; // Offset pour la détection
+      const scrollPosition = window.scrollY + 200;
 
-      // Si on est tout en haut, activer "Accueil"
       if (window.scrollY < 100) {
         setActiveSection("/");
         return;
       }
 
-      // Vérifier chaque section
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -44,32 +42,27 @@ const Header = () => {
       }
     };
 
-    handleScroll(); // Appel initial
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathUrl]);
 
-  // Helper function to check if a menu item is active
   const isActiveLink = (menuPath: string | undefined) => {
     if (!menuPath) return false;
 
-    // Pour les pages normales (pas la page d'accueil)
     if (pathUrl !== "/") {
       return pathUrl === menuPath;
     }
 
-    // Pour la page d'accueil
     if (menuPath === "/") {
       return activeSection === "/" || activeSection === "";
     }
 
-    // Pour les ancres /#features, /#blog
     if (menuPath.startsWith("/#")) {
-      const sectionId = menuPath.substring(2); // Enlève "/#"
+      const sectionId = menuPath.substring(2);
       return activeSection === `#${sectionId}`;
     }
 
-    // Pour les ancres #support
     if (menuPath.startsWith("#")) {
       return activeSection === menuPath;
     }
@@ -77,7 +70,6 @@ const Header = () => {
     return false;
   };
 
-  // Sticky menu
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
       setStickyMenu(true);
@@ -91,16 +83,53 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleStickyMenu);
   }, []);
 
+  const handleHashNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    path: string
+  ) => {
+    setNavigationOpen(false);
+
+    const hashIndex = path.indexOf("#");
+    if (hashIndex === -1) return;
+
+    const hash = path.substring(hashIndex + 1);
+    const basePath = path.substring(0, hashIndex) || "/";
+
+    const headerOffset = 80;
+
+    if (pathUrl === basePath) {
+      e.preventDefault();
+      const target = document.getElementById(hash);
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+      return;
+    }
+
+    e.preventDefault();
+    router.push(basePath);
+
+    const scrollToHash = (attempts: number) => {
+      const target = document.getElementById(hash);
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top, behavior: "smooth" });
+      } else if (attempts > 0) {
+        setTimeout(() => scrollToHash(attempts - 1), 100);
+      }
+    };
+
+    setTimeout(() => scrollToHash(20), 100);
+  };
+
   return (
-<header
-  className={`fixed top-0 left-0 z-99999 w-full py-4 bg-[#e5e0d5]/70 dark:bg-[#4e8fd3]/70 backdrop-blur-sm transition duration-100 ${
-    stickyMenu
-      ? "shadow-sm"
-      : ""
-  }`}
->
+    <header
+      className={`fixed top-0 left-0 z-99999 w-full py-4 bg-[#e5e0d5]/70 dark:bg-[#4e8fd3]/70 backdrop-blur-sm transition duration-100 ${
+        stickyMenu ? "shadow-sm" : ""
+      }`}
+    >
       <div className="max-w-c-1390 relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        {/* <!-- Logo Area --> */}
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
             <Image
@@ -119,7 +148,6 @@ const Header = () => {
             />
           </a>
 
-          {/* <!-- Hamburger Toggle BTN --> */}
           <button
             aria-label="hamburger Toggler"
             className="block xl:hidden"
@@ -157,10 +185,8 @@ const Header = () => {
               </span>
             </span>
           </button>
-          {/* <!-- Hamburger Toggle BTN --> */}
         </div>
 
-        {/* Nav Menu Start   */}
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
@@ -193,8 +219,16 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="text-black dark:text-white hover:text-primary">
-                            <Link href={item.path || "#"} onClick={() => setNavigationOpen(false)}>{item.title}</Link>
+                          <li
+                            key={key}
+                            className="text-black dark:text-white hover:text-primary"
+                          >
+                            <Link
+                              href={item.path || "#"}
+                              onClick={() => setNavigationOpen(false)}
+                            >
+                              {item.title}
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -202,7 +236,16 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
-                      onClick={() => setNavigationOpen(false)}
+                      onClick={(e) => {
+                        if (
+                          menuItem.path &&
+                          menuItem.path.includes("#")
+                        ) {
+                          handleHashNavigation(e, menuItem.path);
+                        } else {
+                          setNavigationOpen(false);
+                        }
+                      }}
                       className={
                         isActiveLink(menuItem.path)
                           ? "text-primary hover:text-primary font-medium"
@@ -218,28 +261,11 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            {/*<ThemeToggler />
-
-            <Link
-              href="https://github.com/NextJSTemplates/solid-nextjs"
-              className="text-regular text-waterloo hover:text-primary font-medium"
-            >
-              GitHub Repo 🌟
-            </Link>
-
-            <Link
-              href="https://nextjstemplates.com/templates/solid"
-              className="bg-primary text-regular hover:bg-primaryho flex items-center justify-center rounded-full px-7.5 py-2.5 text-white duration-300 ease-in-out"
-            >
-              Get Pro 🔥
-            </Link>*/}
           </div>
         </div>
       </div>
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;
