@@ -194,7 +194,7 @@ const Header = () => {
                       >
                         {menuItem.submenu.map((item, key) => (
                           <li key={key} className="text-black dark:text-white hover:text-primary">
-                            <Link href={item.path || "#"}>{item.title}</Link>
+                            <Link href={item.path || "#"} onClick={() => setNavigationOpen(false)}>{item.title}</Link>
                           </li>
                         ))}
                       </ul>
@@ -202,6 +202,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
+                      onClick={() => setNavigationOpen(false)}
                       className={
                         isActiveLink(menuItem.path)
                           ? "text-primary hover:text-primary font-medium"
