@@ -6,13 +6,13 @@ import ContactButton from "@/components/ContactButton";
 
 const productLinks = [
   { href: "/pages/motorisation", label: "Motorisations Connectees" },
+  { href: "/pages/volets", label: "Volets Roulants" },
+  { href: "/pages/terrasse_pergola", label: "Terrasse Et Pergola" },
   { href: "/pages/stores_bannes", label: "Stores Bannes" },
   { href: "/pages/portails", label: "Portails" },
   { href: "/pages/clotures", label: "Clotures" },
   { href: "/pages/interphonie", label: "Interphonie" },
   { href: "/pages/garage", label: "Portes De Garage" },
-  { href: "/pages/volets", label: "Volets Roulants" },
-  { href: "/pages/terrasse_pergola", label: "Terrasse Et Pergola" },
   { href: "/pages/ouvertures", label: "Ouvertures" },
   { href: "/pages/carport", label: "Carports" },
 ];
@@ -41,7 +41,7 @@ const Sidebar = () => {
     <div className="md:w-1/2 lg:w-[32%]">
       <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
         <h4 className="mb-7.5 text-2xl font-semibold text-black dark:text-white">
-          Nos Produits
+          Nos Services
         </h4>
         <ul>
           {productLinks.map((link) => {

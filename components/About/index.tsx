@@ -17,7 +17,7 @@ const About = () => {
 
   return (
     <>
-      <section 
+      <section id="about"
         ref={sectionRef}
         className="relative min-h-screen overflow-hidden"
       >

@@ -20,7 +20,7 @@ const Header = () => {
     if (pathUrl !== "/") return;
 
     const handleScroll = () => {
-      const sections = ["features", "blog", "support"];
+      const sections = ["features", "blog", "support", "faq", "about"];
       const scrollPosition = window.scrollY + 200;
 
       if (window.scrollY < 100) {
@@ -199,12 +199,29 @@ const Header = () => {
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
                     <>
-                      <button
-                        onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="text-black dark:text-white hover:text-primary flex cursor-pointer items-center justify-between gap-3"
-                      >
-                        {menuItem.title}
-                        <span>
+                      <div className="flex cursor-pointer items-center justify-between gap-3">
+                        <Link
+                          href={menuItem.path || "/#features"}
+                          onClick={(e) => {
+                            if (menuItem.path && menuItem.path.includes("#")) {
+                              handleHashNavigation(e, menuItem.path);
+                            } else {
+                              setNavigationOpen(false);
+                            }
+                          }}
+                          className={
+                            isActiveLink(menuItem.path)
+                              ? "text-primary hover:text-primary font-medium"
+                              : "text-black dark:text-white hover:text-primary"
+                          }
+                        >
+                          {menuItem.title}
+                        </Link>
+                        <button
+                          onClick={() => setDropdownToggler(!dropdownToggler)}
+                          className="cursor-pointer"
+                          aria-label="toggle submenu"
+                        >
                           <svg
                             className="fill-waterloo group-hover:fill-primary h-3 w-3 cursor-pointer"
                             xmlns="http://www.w3.org/2000/svg"
@@ -212,20 +229,22 @@ const Header = () => {
                           >
                             <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                           </svg>
-                        </span>
-                      </button>
+                        </button>
+                      </div>
 
                       <ul
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li
-                            key={key}
-                            className="text-black dark:text-white hover:text-primary"
-                          >
+                          <li key={key}>
                             <Link
                               href={item.path || "#"}
                               onClick={() => setNavigationOpen(false)}
+                              className={
+                                pathUrl === item.path
+                                  ? "text-primary font-medium"
+                                  : "text-black dark:text-white hover:text-primary"
+                              }
                             >
                               {item.title}
                             </Link>
