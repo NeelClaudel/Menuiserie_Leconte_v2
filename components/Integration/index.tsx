@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
-import { headerData, integrationItems, IntegrationItem } from "./integrationData";
+import { headerData, integrationItems, IntegrationItem, BrandItem } from "./integrationData";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.97 },
@@ -18,7 +18,9 @@ const cardVariants = {
   }),
 };
 
-const brandItems = integrationItems.filter((item) => item.type === "brand");
+const brandItems = integrationItems.filter(
+  (item): item is BrandItem => item.type === "brand"
+);
 
 const Integration = () => {
   return (
