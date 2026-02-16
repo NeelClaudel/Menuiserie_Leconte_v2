@@ -18,6 +18,8 @@ const cardVariants = {
   }),
 };
 
+const brandItems = integrationItems.filter((item) => item.type === "brand");
+
 const Integration = () => {
   return (
     <section>
@@ -50,9 +52,31 @@ const Integration = () => {
           />
         </div>
 
-        <div className="flex flex-wrap justify-around gap-y-10">
+        <div className="hidden md:flex flex-wrap justify-around gap-y-10">
           {integrationItems.map((item, index) => (
-            <IntegrationItemRenderer key={index} item={item} index={index} />
+            <DesktopItem key={index} item={item} index={index} />
+          ))}
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 md:hidden">
+          {brandItems.map((item, index) => (
+            <motion.div
+              key={index}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.25, ease: "easeOut" },
+              }}
+              className="flex items-center justify-center"
+            >
+              <div className="shadow-solid-7 rounded-[10px] bg-[#4e8fd3] p-4">
+                <Image width={110} height={110} src={item.src} alt={item.alt} />
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -60,9 +84,9 @@ const Integration = () => {
   );
 };
 
-const IntegrationItemRenderer = ({ item, index }: { item: IntegrationItem; index: number }) => {
+const DesktopItem = ({ item, index }: { item: IntegrationItem; index: number }) => {
   if (item.type === "empty") {
-    return <div className="w-1/3 md:w-1/4 xl:w-1/6" />;
+    return <div className="w-1/4 xl:w-1/6" />;
   }
 
   if (item.type === "dot") {
@@ -73,7 +97,7 @@ const IntegrationItemRenderer = ({ item, index }: { item: IntegrationItem; index
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="w-1/3 md:w-1/4 xl:w-1/6"
+        className="w-1/4 xl:w-1/6"
       >
         <div
           className="rounded-full"
@@ -99,7 +123,7 @@ const IntegrationItemRenderer = ({ item, index }: { item: IntegrationItem; index
         y: -6,
         transition: { duration: 0.25, ease: "easeOut" },
       }}
-      className="w-1/3 md:w-1/4 xl:w-1/6"
+      className="w-1/4 xl:w-1/6"
     >
       <div className="shadow-solid-7 inline-block rounded-[10px] bg-[#4e8fd3] p-4.5 cursor-default">
         <Image width={125} height={125} src={item.src} alt={item.alt} />
