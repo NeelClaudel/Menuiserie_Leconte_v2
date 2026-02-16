@@ -20,7 +20,7 @@ const Header = () => {
     if (pathUrl !== "/") return;
 
     const handleScroll = () => {
-      const sections = ["features", "blog", "support", "faq", "about"];
+      const sections = ["home", "features", "blog", "support", "faq", "about"];
       const scrollPosition = window.scrollY + 200;
 
       if (window.scrollY < 100) {

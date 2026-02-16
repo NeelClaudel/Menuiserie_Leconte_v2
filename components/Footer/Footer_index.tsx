@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import { quickLinks, serviceLinks } from "@/components/Header/menuData";
 
 const Footer = () => {
   const pathUrl = usePathname();
@@ -38,6 +39,12 @@ const Footer = () => {
     setTimeout(() => scrollToHash(20), 100);
   };
 
+  const getHashFromPath = (path: string): string | null => {
+    const hashIndex = path.indexOf("#");
+    if (hashIndex === -1) return null;
+    return path.substring(hashIndex + 1);
+  };
+
   return (
     <>
       <footer className="border-stroke dark:border-strokedark dark:bg-blacksection border-t bg-white">
@@ -46,15 +53,8 @@ const Footer = () => {
             <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
               <motion.div
                 variants={{
-                  hidden: {
-                    opacity: 0,
-                    y: -20,
-                  },
-
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                  },
+                  hidden: { opacity: 0, y: -20 },
+                  visible: { opacity: 1, y: 0 },
                 }}
                 initial="hidden"
                 whileInView="visible"
@@ -97,15 +97,8 @@ const Footer = () => {
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
                 <motion.div
                   variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -20,
-                    },
-
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
+                    hidden: { opacity: 0, y: -20 },
+                    visible: { opacity: 1, y: 0 },
                   }}
                   initial="hidden"
                   whileInView="visible"
@@ -118,57 +111,31 @@ const Footer = () => {
                   </h4>
 
                   <ul>
-                    <li>
-                      <a
-                        href="/"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Accueil
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#about"
-                        onClick={(e) => handleHashClick(e, "about")}
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        À Propos
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#features"
-                        onClick={(e) => handleHashClick(e, "features")}
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Nos Services
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#support"
-                        onClick={(e) => handleHashClick(e, "support")}
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Contact
-                      </a>
-                    </li>
+                    {quickLinks.map((link) => {
+                      const hash = getHashFromPath(link.path);
+                      return (
+                        <li key={link.path}>
+                          <a
+                            href={link.path}
+                            onClick={
+                              hash
+                                ? (e) => handleHashClick(e, hash)
+                                : undefined
+                            }
+                            className="hover:text-primary mb-3 inline-block"
+                          >
+                            {link.title}
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </motion.div>
 
-                
                 <motion.div
                   variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -20,
-                    },
-
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
+                    hidden: { opacity: 0, y: -20 },
+                    visible: { opacity: 1, y: 0 },
                   }}
                   initial="hidden"
                   whileInView="visible"
@@ -181,92 +148,23 @@ const Footer = () => {
                   </h4>
 
                   <ul>
-                    <li>
-                      <a
-                        href="/pages/motorisation"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Motorisations Connectees
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/pages/stores_bannes"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Stores Bannes
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/pages/portails"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Portails
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/pages/clotures"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Clotures
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/pages/interphonie"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Interphonie
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/pages/garage"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Portes De Garage
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/pages/volets"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Volets Roulants
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/pages/terrasse_pergola"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Terrasse Et Pergola
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/pages/ouvertures"
-                        className="hover:text-primary mb-3 inline-block"
-                      >
-                        Ouvertures
-                      </a>
-                    </li>
+                    {serviceLinks.map((link) => (
+                      <li key={link.path}>
+                        <a
+                          href={link.path}
+                          className="hover:text-primary mb-3 inline-block"
+                        >
+                          {link.title}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
 
                 <motion.div
                   variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -20,
-                    },
-
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
+                    hidden: { opacity: 0, y: -20 },
+                    visible: { opacity: 1, y: 0 },
                   }}
                   initial="hidden"
                   whileInView="visible"
@@ -282,15 +180,8 @@ const Footer = () => {
           <div className="border-stroke dark:border-strokedark flex flex-col flex-wrap items-center justify-center gap-5 border-t py-7 lg:flex-row lg:justify-between lg:gap-0">
             <motion.div
               variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
+                hidden: { opacity: 0, y: -20 },
+                visible: { opacity: 1, y: 0 },
               }}
               initial="hidden"
               whileInView="visible"
@@ -302,15 +193,8 @@ const Footer = () => {
 
             <motion.div
               variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
+                hidden: { opacity: 0, y: -20 },
+                visible: { opacity: 1, y: 0 },
               }}
               initial="hidden"
               whileInView="visible"
@@ -325,15 +209,8 @@ const Footer = () => {
 
             <motion.div
               variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
+                hidden: { opacity: 0, y: -20 },
+                visible: { opacity: 1, y: 0 },
               }}
               initial="hidden"
               whileInView="visible"
@@ -414,7 +291,6 @@ const Footer = () => {
                     </svg>
                   </a>
                 </li>
-
               </ul>
             </motion.div>
           </div>

@@ -54,5 +54,5 @@ export const aboutCta = {
   description:
     "Intervention d\u2019urgence sous 48h pour tous vos \u00e9quipements de menuiserie ext\u00e9rieure.",
   linkText: "Contactez-nous",
-  linkHref: "/support",
+  linkHref: "#support",
 };

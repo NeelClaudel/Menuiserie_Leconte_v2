@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { aboutIntro, aboutItems, aboutCta } from "./aboutData";
 
 const bentoSpans = [
@@ -30,6 +31,8 @@ const cardVariants = {
 
 const About = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const pathUrl = usePathname();
+  const router = useRouter();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -38,6 +41,37 @@ const About = () => {
 
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
+  const handleHashClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    hash: string
+  ) => {
+    e.preventDefault();
+    const headerOffset = 80;
+
+    if (pathUrl === "/") {
+      const target = document.getElementById(hash);
+      if (target) {
+        const top =
+          target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+      return;
+    }
+
+    router.push("/");
+    const scrollToHash = (attempts: number) => {
+      const target = document.getElementById(hash);
+      if (target) {
+        const top =
+          target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top, behavior: "smooth" });
+      } else if (attempts > 0) {
+        setTimeout(() => scrollToHash(attempts - 1), 100);
+      }
+    };
+    setTimeout(() => scrollToHash(20), 100);
+  };
 
   return (
     <>
@@ -97,7 +131,8 @@ const About = () => {
                   </p>
                 </div>
                 <a
-                  href={aboutCta.linkHref}
+                  href="#support"
+                  onClick={(e) => handleHashClick(e, "support")}
                   className="group mt-6 inline-flex items-center gap-2.5 text-primary font-medium"
                 >
                   <span className="duration-300 group-hover:pr-2">

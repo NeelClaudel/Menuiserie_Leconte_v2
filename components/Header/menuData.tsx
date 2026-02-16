@@ -9,23 +9,10 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "À Propos",
+    title: "\u00C0 Propos",
     newTab: false,
     path: "/#about",
-    
   },
-  /*{
-    id: 2.1,
-    title: "Réalisations",
-    newTab: false,
-    path: "/#blog",
-  },*/
-  /*{
-    id: 2.3,
-    title: "Docs",
-    newTab: false,
-    path: "/docs",
-  },*/
   {
     id: 3,
     title: "Nos Services",
@@ -34,7 +21,7 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 3.1,
-        title: "Motorisations Connectées",
+        title: "Motorisations Connect\u00E9es",
         newTab: false,
         path: "/pages/motorisation",
       },
@@ -64,7 +51,7 @@ const menuData: Menu[] = [
       },
       {
         id: 3.6,
-        title: "Clôtures",
+        title: "Cl\u00F4tures",
         newTab: false,
         path: "/pages/clotures",
       },
@@ -86,7 +73,7 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/pages/ouvertures",
       },
-            {
+      {
         id: 3.10,
         title: "Carports",
         newTab: false,
@@ -94,7 +81,6 @@ const menuData: Menu[] = [
       },
     ],
   },
-
   {
     id: 4,
     title: "FAQ",
@@ -108,5 +94,16 @@ const menuData: Menu[] = [
     path: "/#support",
   },
 ];
+
+export const quickLinks = menuData.map((item) => ({
+  title: item.title,
+  path: item.path || "/",
+}));
+
+const servicesMenu = menuData.find((item) => item.submenu);
+export const serviceLinks = (servicesMenu?.submenu || []).map((item) => ({
+  title: item.title,
+  path: item.path || "#",
+}));
 
 export default menuData;

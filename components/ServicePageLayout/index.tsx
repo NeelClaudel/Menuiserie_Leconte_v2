@@ -2,20 +2,8 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ServicePageData } from "@/types/servicePage";
-import ContactButton from "@/components/ContactButton";
-
-const productLinks = [
-  { href: "/pages/motorisation", label: "Motorisations Connectees" },
-  { href: "/pages/volets", label: "Volets Roulants" },
-  { href: "/pages/terrasse_pergola", label: "Terrasse Et Pergola" },
-  { href: "/pages/stores_bannes", label: "Stores Bannes" },
-  { href: "/pages/portails", label: "Portails" },
-  { href: "/pages/clotures", label: "Clotures" },
-  { href: "/pages/interphonie", label: "Interphonie" },
-  { href: "/pages/garage", label: "Portes De Garage" },
-  { href: "/pages/ouvertures", label: "Ouvertures" },
-  { href: "/pages/carport", label: "Carports" },
-];
+import ContactButton from "@/components/ContactButton/ContactButton_index";
+import { serviceLinks } from "@/components/Header/menuData";
 
 type Props = {
   data: ServicePageData;
@@ -44,18 +32,18 @@ const Sidebar = () => {
           Nos Services
         </h4>
         <ul>
-          {productLinks.map((link) => {
-            const isActive = pathname === link.href;
+          {serviceLinks.map((link) => {
+            const isActive = pathname === link.path;
             return (
               <li
-                key={link.href}
+                key={link.path}
                 className={`mb-3 transition-all duration-300 last:mb-0 ${
                   isActive
                     ? "font-semibold text-primary"
                     : "hover:text-primary"
                 }`}
               >
-                <a href={link.href}>{link.label}</a>
+                <a href={link.path}>{link.title}</a>
               </li>
             );
           })}

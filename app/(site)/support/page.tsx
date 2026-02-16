@@ -1,12 +1,12 @@
 import React from "react";
-import Contact from "@/components/Contact";
+import Contact from "@/components/Contact/Contact_index";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Menuiserie Leconte",
 
   // other metadata
-  description: "This is the contact page for Menuiserie Leconte"
+  description: "Contact Menuiserie Leconte, Artisan menuisier dans le Morbihan"
 };
 
 const SupportPage = () => {
